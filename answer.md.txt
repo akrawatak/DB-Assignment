@@ -1,0 +1,8 @@
+Q1.Explain the relationship between the "Product" and "Product_Category" entities from the above diagram.
+
+ans:product table and product_category table both are connected through a foriegn key category_id which is named as id in product_category tablewhich also a primary key for its own table although i preferred to name them same for more clearity and their cardinality is Many to one as it can seen in edge connecting them product table side its * which represent (many)and in product_cateogry its 1 which represent one. Hence many to one relationship.
+
+
+Q2.How could you ensure that each product in the "Product" table has a valid category assigned to it?
+
+ans: to ensure this we can use foriegn key between product table and product-category table to maintain refrential integrity so that for refrenced table during insertion no problem will happen but during insertion it may cause violation for this we can use on delete cascade, on delete Null , on delete no action similary for updation it may cause violation for this we can use on update cascade. and for refrenced table insertion may cause violation , deletion we can do , updation may cause violation
